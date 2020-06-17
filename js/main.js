@@ -8,6 +8,7 @@ $(document).ready(function () {
     });
 });
 
+// THEME SWITCH
 
 var toggle = $('.toggle');
 var bol = $('.bol');
@@ -37,9 +38,10 @@ toggle.click(function () {
     }
 });
 
+// PLAY & PAUSE SWITCH
+
 $('video').each(function (i, el) {
-    var p = $(el).parent();
-    $('.playtoggle', p).click(function () {
+    $('.playtoggle').click(function () {
         console.log($(this));
         if ($(this).hasClass('play')) {
             $(this).removeClass('play');
@@ -62,3 +64,15 @@ $('video').each(function (i, el) {
         }
     });
 });
+
+// FORWARD BUTTON
+
+// $('video').each (function i, el) {
+//    var p = $(el).parent();
+    
+
+//}
+
+
+// REWIND BUTTON
+
