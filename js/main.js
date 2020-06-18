@@ -22,7 +22,7 @@ toggle.click(function () {
     if (count == true) {
         count = false;
         bol.css({
-            "left": "58%",
+            "left": "5%",
         });
         body.css({
             "background": "black",
@@ -30,7 +30,7 @@ toggle.click(function () {
     } else if (count == false) {
         count = true;
         bol.css({
-            "left": "3%",
+            "left": "55%",
         });
         body.css({
             "background": "white"
@@ -41,7 +41,8 @@ toggle.click(function () {
 // PLAY & PAUSE SWITCH
 
 $('video').each(function (i, el) {
-    $('.playtoggle').click(function () {
+    var p = $(el).parent();
+    $('.playtoggle', p).click(function () {
         console.log($(this));
         if ($(this).hasClass('play')) {
             $(this).removeClass('play');
@@ -76,3 +77,16 @@ $('video').each(function (i, el) {
 
 // REWIND BUTTON
 
+
+// slick slider
+
+$(document).ready(function() {
+$('.slickwrap').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+});
